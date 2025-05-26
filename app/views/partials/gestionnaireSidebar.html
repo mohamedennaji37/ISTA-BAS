@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/ABS-ISTA/app/views/partials/style.css">
+</head>
+<body>
+
+    <div class="col-md-3 col-lg-2 sidebar" id="sidebar">
+        <div class="d-flex align-items-center justify-content-center">
+            <img src="/ABS-ISTA/app/views/partials/ista-abs.png" alt="Logo" style="width: 140px; height: 50px;">
+        </div>
+        <div class="sidebar-header d-flex align-items-center justify-content-center">
+            <h1 class="h5 mb-0 fw-bold">ISTA-ABS</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="/ABS-ISTA/dashboard" class="sidebar-menu-button"><i class="bi bi-speedometer2"></i> Tableau de bord</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="/ABS-ISTA/absence/gestionnaireView" class="sidebar-menu-button"><i class="bi bi-building"></i> Mes Groupes>
+                </li>
+                <!-- <li class="sidebar-menu-item">
+                    <a href="/ABS-ISTA/users" class="sidebar-menu-button"><i class="bi bi-person-lines-fill"></i> Gestion de compte</a>
+                </li> -->
+                <li class="sidebar-menu-item">
+                    <a href="/ABS-ISTA/seance" class="sidebar-menu-button"><i class="bi bi-calendar-check"></i> Historique d'absence
+                    </a>
+                </li>
+                <li class="sidebar-menu-item dropdown">
+                    <a class="sidebar-menu-button dropdown-toggle" id="paramBtn" href="#" role="button" onclick="toggleDropdown('paramDropdown')">
+                        <i class="bi bi-gear"></i> Paramètres
+                    </a>
+                    <ul class="dropdown-menu" id="paramDropdown">
+                        <!-- <li><a class="dropdown-item" href="#"> <i class="bi bi-calendar-week"></i> Année universitaire</a></li>
+                        <li><a class="dropdown-item" href="/ABS-ISTA/secteur"> <i class="bi bi-grid"></i> Secteurs</a></li>
+                        <li><a class="dropdown-item" href="/ABS-ISTA/filiere"> <i class="bi bi-diagram-3"></i> Filières</a></li>
+                        <li><a class="dropdown-item" href="/ABS-ISTA/group"> <i class="bi bi-diagram-3"></i> Groups</a></li>
+                        <li><a class="dropdown-item" href="/ABS-ISTA/module"> <i class="bi bi-bookmarks"></i> Modules</a></li>
+                        <li><a class="dropdown-item" href="/ABS-ISTA/enseignant"> <i class="bi bi-diagram-3"></i> Enseignant</a></li> -->
+                        <li><a class="dropdown-item" href="/ABS-ISTA/stagiaire"> <i class="bi bi-people"></i> Stagiaires</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-footer">
+            <div class="dropup">
+                <button class="btn btn-primary dropdown-toggle dropup-button" id="actionBtn" type="button" onclick="toggleDropdown('actionDropdown')">
+                    <i class="bi bi-person-gear"></i> Mon Compte
+                </button>
+                <ul class="dropdown-menu action-dropdown" id="actionDropdown">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i> Profile</a></li>
+                    <li><a class="dropdown-item" href="/ABS-ISTA/logout"><i class="bi bi-box-arrow-right"></i> Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/ABS-ISTA/app/views/partials/script.js"></script>
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.classList.toggle('show');
+        }
+    </script>
+    
+</body>
+</html>
